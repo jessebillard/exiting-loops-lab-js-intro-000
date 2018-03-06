@@ -19,8 +19,8 @@ function keepGoing(array, changeValue, skipValue) {
 //hokey dokey
 function findBy(array, findFn) {
   for(let i = 0; i < array.length; i++) {
-    if(typeof findFn(array[i]) === 'number') {
-       return array[i]
+    if(typeof array[i] === 'function') {
+       return findFn()
     } else {
        return null
       }
